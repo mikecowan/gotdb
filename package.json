@@ -1,10 +1,6 @@
 {
   "name": "gotdb",
-  "root": "build/",
-  "clean_urls": false,
-  "routes": {
-    "/**": "index.html"
-  },
+  "homepage": "http://codedozer.net/gotdb/",
 
   "version": "0.1.0",
   "private": true,
