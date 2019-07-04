@@ -5,3 +5,44 @@
 .aligntop {
     vertical-align: top;
 }
+
+.centerPanel {
+  width: 50%;
+  margin: auto 5%;
+}
+
+.floatLeft {
+  display: inline-block;
+  float: left;
+}
+
+.floatRight {
+  display: inline-block;
+  float: right;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+.showLeftPanel {
+
+}
+
+.relativePosition {
+  position: relative;
+}
+
+.hideLeftPanel {
+
+}
+
+.hideRightPanel {
+  left: 50%;
+}
+
+@media (max-width: 600px) {
+  .centerPanel {
+    margin: 0;
+  }
+}

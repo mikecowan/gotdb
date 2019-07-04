@@ -1,5 +1,18 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
+  font-family: calibri;
+}
+
+.text-sm {
+  font-size: 10px;
+}
+
+.text-md {
+  font-size: 12px;
+}
+
+.text-lg {
+  font-size: 14px;
 }
 
 .App-logo {
@@ -16,6 +29,26 @@
 
 .App-intro {
   font-size: large;
+}
+
+.floatImg {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .App {
+    font-size: 12px;
+  }
 }
 
 @keyframes App-logo-spin {

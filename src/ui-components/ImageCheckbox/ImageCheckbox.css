@@ -1,0 +1,15 @@
+.iconwrap {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.checked {
+  background-color: gold;
+  
+}
+
+.icon {
+  width: 30px;
+}
+

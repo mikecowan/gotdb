@@ -1,0 +1,67 @@
+.headerRow > div {
+  cursor: pointer;
+}
+
+.cardRow > div {
+  display: inline-block;
+}
+
+.col-sm {
+  min-width: 5%;
+}
+
+.col-md {
+  min-width: 15%;
+}
+
+.col-lg {
+  min-width: 30%;
+}
+
+
+.mix {
+  mix-blend-mode: multiply;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.factionKneel {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cardTable {
+  padding-bottom: 500px;
+}
+
+.arrow {
+  width: 5px;
+  height: 13px;
+}
+
+.icon-sm {
+  max-width: 20px;
+}
+
+.icon-md {
+
+}
+
+.icon {
+  max-width: 25px;
+}
+
+.loyal-1 { background-color: #cfcfcf; }
+.loyal-2 { background-color: #c00106; }
+.loyal-3 { background-color: #e3d852; }
+.loyal-4 { background-color: #1d7a99; }
+.loyal-5 { background-color: #509f16; }
+.loyal-6 { background-color: #e89521; }
+.loyal-7 { background-color: hotpink; }
+.loyal-8 { background-color: #7a7a7a; }
+
+
+
+

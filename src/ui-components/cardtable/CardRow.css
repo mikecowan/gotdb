@@ -1,0 +1,68 @@
+.cardTable {
+  padding-bottom: 500px;
+}
+
+.cardRow {
+  margin-bottom: 1%;
+}
+
+.cardRow > div {
+  display: inline-block;
+}
+
+.cardName {
+  min-width: 25%;
+}
+
+.cardType {
+  min-width: 10%;
+}
+
+.smallCol {
+  min-width: 3%;
+  text-align: center;
+}
+
+.iconCol {
+  min-width: 10%;
+}
+
+.plotCol {
+  min-width: 10%;
+}
+
+.loyal-1 { background-color: #cfcfcf; }
+.loyal-2 { background-color: #c00106; }
+.loyal-3 { background-color: #e3d852; }
+.loyal-4 { background-color: #1d7a99; }
+.loyal-5 { background-color: #509f16; }
+.loyal-6 { background-color: #e89521; }
+.loyal-7 { background-color: hotpink; }
+.loyal-8 { background-color: #7a7a7a; }
+
+.factionKneel {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.icon {
+  max-width: 25px;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.mix {
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+  .smallCol {
+    min-width: 5%;
+  }
+
+  .icon {
+    max-width: 15px;
+  }
+}

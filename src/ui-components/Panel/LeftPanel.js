@@ -1,61 +1,68 @@
 import React, { Component } from 'react';
+import CheckboxGroup from '../CheckboxGroup';
 
 class LeftPanel extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.getCard = this.getCard.bind(this);
+    this.factionChange = this.factionChange.bind(this);
+    this.typeChange = this.typeChange.bind(this);
+  }
 
-        this.state = {
-            textval: ''
-        };
-    }
+  factionChange(FactionList) {
+    let cardFilter = this.props.cardFilterList;
+    cardFilter.Factions = FactionList;
 
-    getCard(ev) {
-        const intVal = parseInt(ev.currentTarget.value);
-        this.setState({ textval: intVal });
+    this.props.loadCards(cardFilter);
+  }
 
-        const test = this.state.textval;
-        console.log(test);
+  typeChange(TypeList) {
+    let cardFilter = this.props.cardFilterList;
+    cardFilter.Types = TypeList;
+    this.props.loadCards(cardFilter);
+  }
 
-        this.props.getCard(intVal);
-    }
+  render() {
+    const allFactions = { 'suffix': 'all', 'label': 'ALL Houses' };
+    const factionLabelList = [
+      { 'index': 0, 'label': 'Neutral' },
+      { 'index': 1, 'label': 'Stark' },
+      { 'index': 2, 'label': 'Lannister' },
+      { 'index': 3, 'label': 'Baratheon' },
+      { 'index': 4, 'label': 'Greyjoy' },
+      { 'index': 5, 'label': 'Tyrell' },
+      { 'index': 6, 'label': 'Martell' },
+      { 'index': 7, 'label': 'Targaryen' },
+      { 'index': 8, 'label': "Night's Watch" }
+    ]
 
-    render() {
-        const card = this.props.card;
+    const allTypes = { 'suffix': 'all', 'label': 'ALL Types' };
+    const typeLabelList = [
+      { 'index': 1, 'label': 'Characters' },
+      { 'index': 2, 'label': 'Events' },
+      { 'index': 3, 'label': 'Attachments' },
+      { 'index': 4, 'label': 'Locations' },
+      { 'index': 5, 'label': 'Plots' },
+      { 'index': 6, 'label': 'Agendas' }
+    ]
 
-        const cardName = card === null ? '' : card.cardName;
+    return (
+      <div className='inlineblock aligntop'>
+        <div>
+          <CheckboxGroup prefix='cb-house' all={allFactions} labels={factionLabelList}
+                         handleChange={this.factionChange}
+                         checkedItemIndices={this.props.cardFilterList.Factions} />
+        </div>
 
-        return (
-            <div className='inlineblock aligntop'>
-                <p>{cardName}</p>
-                <input type="text" onChange={this.getCard} value={this.state.textvalue} />
-                
-                <ul>
-                    <li>ALL</li>
-                    <li>Neutral</li>
-                    <li>Stark</li>
-                    <li>Lannister</li>
-                    <li>Baratheon</li>
-                    <li>Greyjoy</li>
-                    <li>Tyrell</li>
-                    <li>Martell</li>
-                    <li>Targaryen</li>
-                    <li>Night's Watch</li>
-                </ul>
+        <div>
+          <CheckboxGroup prefix='cb-type' all={allTypes} labels={typeLabelList}
+                         handleChange={this.typeChange}
+                         checkedItemIndices={this.props.cardFilterList.Types} />
+        </div>
 
-                <ul>
-                    <li>ALL</li>
-                    <li>Characters</li>
-                    <li>EVents</li>
-                    <li>Attachments</li>
-                    <li>Locations</li>
-                    <li>Plots</li>
-                    <li>Agendas</li>
-                </ul>
-            </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 
 export default LeftPanel;
